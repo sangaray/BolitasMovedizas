@@ -1,0 +1,156 @@
+* {
+	box-sizing: border-box;
+	background-color: #333;
+	font-size: 10px;
+}
+
+/* prettier-ignore */
+body, div {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background: #000; /* Fondo oscuro para resaltar las bolitas */
+}
+
+.bubble {
+	position: absolute;
+	bottom: -100px; /* Inicia fuera de la vista */
+	border-radius: 50%;
+	animation: floatUp 10s infinite, changeColor 5s infinite;
+}
+
+/* Animación para que las bolitas floten de abajo hacia arriba */
+@keyframes floatUp {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-1200px);
+		opacity: 0; /* Desaparece al final del recorrido */
+	}
+}
+
+/* Animación para cambiar los colores de las bolitas */
+@keyframes changeColor {
+	0% {
+		background-color: rgba(255, 255, 255, 0.7);
+	}
+	25% {
+		background-color: rgba(255, 0, 0, 0.7); /* Rojo */
+	}
+	50% {
+		background-color: rgba(0, 255, 0, 0.7); /* Verde */
+	}
+	75% {
+		background-color: rgba(0, 0, 255, 0.7); /* Azul */
+	}
+	100% {
+		background-color: rgba(255, 255, 0, 0.7); /* Amarillo */
+	}
+}
+
+/* Generar múltiples bolitas con distintos tamaños y duraciones */
+.bubble:nth-child(1),
+.bubble:nth-child(40),
+.bubble:nth-child(11),
+.bubble:nth-child(31) {
+	width: 40px;
+	height: 40px;
+	left: 10%;
+	animation-duration: 15s;
+	z-index: 1;
+}
+.bubble:nth-child(2),
+.bubble:nth-child(39),
+.bubble:nth-child(12) {
+	width: 60px;
+	height: 60px;
+	left: 20%;
+	animation-duration: 20s;
+	z-index: 2;
+}
+.bubble:nth-child(3),
+.bubble:nth-child(38),
+.bubble:nth-child(13) {
+	width: 30px;
+	height: 30px;
+	left: 30%;
+	animation-duration: 10s;
+	z-index: 3;
+}
+.bubble:nth-child(4),
+.bubble:nth-child(30),
+.bubble:nth-child(14),
+.bubble:nth-child(29) {
+	width: 50px;
+	height: 50px;
+	left: 40%;
+	animation-duration: 25s;
+	z-index: 4;
+}
+.bubble:nth-child(5),
+.bubble:nth-child(37),
+.bubble:nth-child(15),
+.bubble:nth-child(28) {
+	width: 70px;
+	height: 70px;
+	left: 50%;
+	animation-duration: 18s;
+	z-index: 5;
+}
+.bubble:nth-child(6),
+.bubble:nth-child(27),
+.bubble:nth-child(16),
+.bubble:nth-child(26) {
+	width: 20px;
+	height: 20px;
+	left: 60%;
+	animation-duration: 12s;
+	z-index: 6;
+}
+.bubble:nth-child(7),
+.bubble:nth-child(35),
+.bubble:nth-child(17),
+.bubble:nth-child(25) {
+	width: 80px;
+	height: 80px;
+	left: 70%;
+	animation-duration: 22s;
+	z-index: 7;
+}
+.bubble:nth-child(8),
+.bubble:nth-child(34),
+.bubble:nth-child(18),
+.bubble:nth-child(24) {
+	width: 25px;
+	height: 25px;
+	left: 80%;
+	animation-duration: 17s;
+	z-index: 8;
+}
+.bubble:nth-child(9),
+.bubble:nth-child(33),
+.bubble:nth-child(19),
+.bubble:nth-child(23) {
+	width: 45px;
+	height: 45px;
+	left: 90%;
+	animation-duration: 14s;
+	z-index: 9;
+}
+.bubble:nth-child(10),
+.bubble:nth-child(32),
+.bubble:nth-child(20),
+.bubble:nth-child(22) {
+	width: 35px;
+	height: 35px;
+	left: 95%;
+	animation-duration: 19s;
+	z-index: 10;
+}
